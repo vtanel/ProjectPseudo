@@ -5,7 +5,11 @@
     <title>Kliendipoolsed</title>
 </head>
 <body>
-
-
+    <button onclick="tervitus()">Tere Maailm!</button>
+    <script>
+        function tervitus() {
+            alert("Tere Maailm!!");
+        }
+    </script>
 </body>
 </html>
