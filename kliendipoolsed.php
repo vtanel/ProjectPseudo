@@ -25,7 +25,7 @@
         alert("J" + String.fromCharCode(228, 228) + "me siia...");
     }
 </script>
-<br>
+<br><br>
 <img
     id="pilt"
     src="http://1280x1024-taustapildid.free-online.gratis/pictures/Ilusaid-pilte-t%C3%B6%C3%B6laua-taustapilti-1446.jpg"
@@ -33,10 +33,8 @@
 <script>
     function muuda() {
         var image = document.getElementById('pilt');
-        if (image.src.match("bulbon")) {
+        if (image.src.match("pilt")) {
             image.src = "http://vignette1.wikia.nocookie.net/josh100lubu/images/4/40/18360-doge-doge-simple.jpg/revision/latest?cb=20150626051745";
-        } else {
-            image.src = "http://1280x1024-taustapildid.free-online.gratis/pictures/Ilusaid-pilte-t%C3%B6%C3%B6laua-taustapilti-1446.jpg";
         }
     }
 </script>
