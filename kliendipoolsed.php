@@ -43,6 +43,22 @@
             });
         </script>
     <br><br>
+    <!--nupud mis muudavad taustavärvi -->
+    <button type="button" onclick="varv1()">Red</button>
+    <button type="button" onclick="varv2()">Green</button>
+    <button type="button" onclick="varv3()">Blue</button>
+
+        <script>
+            function varv1(){
+                var button = document.getElementById('body').style.backgroundColor='Red';
+            }
+            function varv2(){
+                var button = document.getElementById('body').style.backgroundColor='Green';
+            }
+            function varv3(){
+                var button = document.getElementById('body').style.backgroundColor='Blue';
+            }
+        </script>
 
 
 </body>
