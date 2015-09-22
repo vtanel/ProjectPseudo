@@ -59,7 +59,13 @@
                 var button = document.getElementById('body').style.backgroundColor='Blue';
             }
         </script>
-
+    <!--Nupp mis genereerib value nupu nimest-->
+    <button type="button" id="nupp">yellow</button>
+        <script>
+            $("#nupp").click(function(){
+                $("#body").css("background-color",$("#nupp").text());
+            });
+        </script>
 
 </body>
 </html>
