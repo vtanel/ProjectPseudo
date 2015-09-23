@@ -66,13 +66,24 @@
                 $("#body").css("background-color",$("#nupp").text());
             });
         </script>
-    <!-- Keelan parema kliki kasutamise veebilehel   -->
+    <!-- Keelan ja luban parema kliki kasutamise veebilehel   -->
     <script>
+        //keelan parema kliki
         $(document).ready(function(){
             $(this).bind("contextmenu", function(e) {
                 e.preventDefault();
             });
+            //Luban taas parema kliki
+            $("#lubaKlikk").click(function(){
+                $(document).ready(function(){
+                    $(this).unbind();
+                    });
+                });
         });
     </script>
+    <br><br>
+    <!--  Nupp parema kliki tegemiseks  -->
+    <button type="button" id="lubaKlikk">Luba parem kl&otildeps</button>
+
 </body>
 </html>
