@@ -8,7 +8,8 @@
 <?php
     $eesNimi='Tanel';
     $pereNimi='Viira';
-    echo $eesNimi.'&nbsp'.$pereNimi;
+    $vanus=21;
+    echo $eesNimi.' '.$pereNimi.' ('.$vanus.')';
 ?>
 </body>
 </html>
