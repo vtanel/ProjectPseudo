@@ -14,7 +14,7 @@
             }
         </script>
     <br><br>
-    <!--link alert'ib ja seejärel khk leheküljele-->
+    <!--link alert'ib ja seejÃ¤rel khk lehekÃ¼ljele-->
     <a href="http://www.khk.ee" onclick="terekhk()">Tere Maailm</a>
         <script>
             function terekhk() {
@@ -22,8 +22,8 @@
             }
         </script>
     <br><br>
-    <!--Link mis alert'ib kuid jääb lehele. href peab tühjaks jääma-->
-    <a href="" onclick="jaame()">J&auml&aumlme siia!</a>
+    <!--Link mis alert'ib kuid jÃ¤Ã¤b lehele. href peab tÃ¼hjaks jÃ¤Ã¤ma-->
+    <a href onclick="jaame()">J&auml&aumlme siia!</a>
         <script>
             function jaame() {
                 alert("J" + String.fromCharCode(228, 228) + "me siia...");
@@ -43,7 +43,7 @@
             });
         </script>
     <br><br>
-    <!--nupud mis muudavad taustavärvi -->
+    <!--nupud mis muudavad taustavÃ¤rvi -->
     <button type="button" onclick="varv1()">Red</button>
     <button type="button" onclick="varv2()">Green</button>
     <button type="button" onclick="varv3()">Blue</button>
@@ -84,6 +84,19 @@
     <br><br>
     <!--  Nupp parema kliki tegemiseks  -->
     <button type="button" id="lubaKlikk">Luba parem kl&otildeps</button>
-
+    <br><br>
+    <!--  Nupp mis peidab/toob esile kassipildi  -->
+    <button type="button" id="peidaTooEsile">Do the Magic!</button>
+         <script>
+             $(document).ready(function () {
+                 $('#peidaTooEsile').click(function() {
+                     $('#pilt').toggle(function() {
+                         $('#peidaTooEsile').hide();
+                     }, function() {
+                         $('#peidaTooEsile').show();
+                     });
+                 });
+             });
+         </script>
 </body>
 </html>
