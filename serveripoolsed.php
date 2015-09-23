@@ -9,7 +9,7 @@
     $eesNimi='Tanel';
     $pereNimi='Viira';
     $vanus=21;
-    echo $eesNimi.' '.$pereNimi.' ('.$vanus.')';
+    echo $eesNimi.'&nbsp'.$pereNimi.' ('.$vanus.')';
 ?>
 </body>
 </html>
