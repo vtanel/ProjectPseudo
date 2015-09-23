@@ -6,10 +6,11 @@
 </head>
 <body>
 <?php
-    $eesNimi='Tanel';
-    $pereNimi='Viira';
-    $vanus=21;
-    echo $eesNimi.'&nbsp'.$pereNimi.' ('.$vanus.')';
+$eesNimi='Tanel';
+$pereNimi='Viira';
+$vanus=21;
+$eesnimi_algab_vokaaliga = false;
+echo $eesNimi.'&nbsp'.$pereNimi.' ('.$vanus.')';
 ?>
 </body>
 </html>
