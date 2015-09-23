@@ -66,6 +66,13 @@
                 $("#body").css("background-color",$("#nupp").text());
             });
         </script>
-
+    <!-- Keelan parema kliki kasutamise veebilehel   -->
+    <script>
+        $(document).ready(function(){
+            $(this).bind("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
 </body>
 </html>
