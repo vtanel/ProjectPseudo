@@ -44,11 +44,18 @@ class persoon{
 }
 $me=new persoon();
 echo $me->valjasta();*/
-
+/*
 $arv1=1.23;
 $arv2=2.34;
 $sum=$arv1+$arv2;
 echo $sum;
+*/
+$koer='terjer';
+echo '<form action="serveripoolsed.php" method="get">
+    <input type="text" name="koer" value="'.$koer.'" hidden>
+    <input type="submit">
+</form>';
 ?>
+
 </body>
 </html>
