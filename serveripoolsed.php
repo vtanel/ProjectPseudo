@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-$eesnimi_algab_vokaaliga;
+/*$eesnimi_algab_vokaaliga;
 $vokaalid=array('A','E','I','O','U','Õ','Ä','Ö','Ü');
 $isik=array(
     'Eesnimi'=>'Tanel ',
@@ -43,7 +43,12 @@ class persoon{
 
 }
 $me=new persoon();
-echo $me->valjasta();
+echo $me->valjasta();*/
+
+$arv1=1.23;
+$arv2=2.34;
+$sum=$arv1+$arv2;
+echo $sum;
 ?>
 </body>
 </html>
