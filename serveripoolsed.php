@@ -54,7 +54,16 @@ $koer='terjer';
 echo '<form action="serveripoolsed.php" method="get">
     <input type="text" name="koer" value="'.$koer.'" hidden>
     <input type="submit">
+</form><br><br>';
+echo '<form action="?" method="POST">
+    <input type="text" value="kass" name="name">
+    <input type="submit" name="vaata">
 </form>';
+if($_POST['vaata']){
+    if($_POST['name']!==''){
+        echo 'Kass oli: '.$_POST['name'];
+    }
+}
 ?>
 
 </body>
