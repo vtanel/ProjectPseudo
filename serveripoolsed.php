@@ -59,7 +59,7 @@ echo '<form action="?" method="POST">
     <input type="text" value="kass" name="name">
     <input type="submit" name="vaata">
 </form>';
-if($_POST['vaata']){
+if(isset($_POST['vaata'])){
     if($_POST['name']!==''){
         echo 'Kass oli: '.$_POST['name'];
     }
