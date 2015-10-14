@@ -1,18 +1,29 @@
 <?php
-$posts=[
-    "0"=>[
-        'title'=>'Man must explore, and this is exploration at its greatest',
-        'subtitle'=>'Problems look mighty small from 150 miles up',
-        'author'=>'<a href="#">Start Bootstrap</a>',
-        'date'=>'September 24, 2014'
-    ],
-    ""=>[
-        'title'=>'Man must t',
-        'subtitle'=>'Problems look mighty small from 150 miles up',
-        'author'=>'<a href="#">Start Bootstrap</a>',
-        'date'=>'September 24, 2014'
-    ]
-]
+
+
+//data
+$host='127.0.0.1';
+$user='root';
+$pw='';
+$database='blog';
+
+//connection to db
+$db = mysqli_connect($host,$user,$pw,$database) or die(mysqli_error($db));
+mysqli_query($db, "SET NAMES 'utf8'");
+
+//Retrieve data from database
+$q = mysqli_query($db, "
+  SELECT
+    *,
+    DATE_FORMAT(date, '%d.%m.%Y %H:%i') date
+  FROM posts
+    NATURAL JOIN authors
+  ");
+
+while ($row = mysqli_fetch_assoc($q)) {
+$posts[] = $row;
+}
+
 
 
 
@@ -122,10 +133,10 @@ $posts=[
                                     <?=$post["title"]?>
                                 </h2>
                                 <h3 class="post-subtitle">
-                                    <?=$post['subtitle']?>
+                                    <?=$post['description']?>
                                 </h3>
                             </a>
-                            <p class="post-meta">Posted by <?=$post['author']?> on <?=$post['date']?></p>
+                            <p class="post-meta">Posted by <?=$post['name']?> on <?=$post['date']?></p>
                         </div>
                     <hr>
 
