@@ -1,12 +1,7 @@
 <?php
-//data
-$host='127.0.0.1';
-$user='root';
-$pw='';
-$database='blog';
-
+require 'config.sample.php';
 //connection to db
-$db = mysqli_connect($host,$user,$pw,$database) or die(mysqli_error($db));
+$db = mysqli_connect(DATABASE_HOSTNAME, DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_DATABASE) or die(mysqli_error($db));
 mysqli_query($db, "SET NAMES 'utf8'");
 
 //Retrieve data from database
