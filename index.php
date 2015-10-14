@@ -1,6 +1,4 @@
 <?php
-
-
 //data
 $host='127.0.0.1';
 $user='root';
@@ -23,17 +21,7 @@ $q = mysqli_query($db, "
 while ($row = mysqli_fetch_assoc($q)) {
 $posts[] = $row;
 }
-
-
-
-
-
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,22 +111,26 @@ $posts[] = $row;
 
     <!-- Main Content -->
     <div class="container">
-        <?foreach ($posts as $post):?>
+
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                        <div class="post-preview">
-                            <a href="post.html">
-                                <h2 class="post-title">
-                                    <?=$post["title"]?>
-                                </h2>
-                                <h3 class="post-subtitle">
-                                    <?=$post['description']?>
-                                </h3>
-                            </a>
-                            <p class="post-meta">Posted by <?=$post['name']?> on <?=$post['date']?></p>
-                        </div>
+            <?foreach ($posts as $post):?>
+
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            <?=$post["title"]?>
+                        </h2>
+                        <h3 class="post-subtitle">
+                            <?=$post['description']?>
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <?=$post['name']?> on <?=$post['date']?></p>
+                </div>
                     <hr>
+
+            <?endforeach?>
 
                 <!-- Pager -->
                 <ul class="pager">
@@ -148,7 +140,6 @@ $posts[] = $row;
                 </ul>
             </div>
         </div>
-        <?endforeach?>
     </div>
 
     <hr>
